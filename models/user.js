@@ -9,8 +9,7 @@ const userSchema = new Schema({
   role:{
       type: String,
       required: true,
-      enum:['consumer','employee','stationIncharge'],
-      default:'consumer'
+      enum:['consumer','employee','stationIncharge']
   },
   password: {
     type: String,

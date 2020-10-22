@@ -12,7 +12,7 @@ const bookingRoutes = require('./routes/booking');
 //Middlewares
 app.use(bodyParser.json());
 app.use(cors());
-
+app.use('/images', express.static('images'));
 app.use((error, req, res, next) => {
     console.log(error);
     const status = error.statusCode || 500;

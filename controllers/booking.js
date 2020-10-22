@@ -51,7 +51,7 @@ exports.getBooking = async (req, res, next) => {
 exports.updateBooking = async (req, res, next) => {
     const role = req.token.role;
     if (role !== UserRole.EMPLOYEE) {
-        const error = new Error('You Are Not Station Incharge');
+        const error = new Error('Not Authenticated!');
         error.statusCode = 401;
         throw error;
     }

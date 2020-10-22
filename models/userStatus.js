@@ -5,7 +5,6 @@ const userStatusSchema = new Schema({
   status:{
       type:String,
       enum:['active','blocked','deleted'],
-      default:'active',
       required:true
   },
   user:{
